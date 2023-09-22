@@ -1,0 +1,55 @@
+<%- include("partials/header.ejs") %>
+
+<!-- Blog Banner -->
+
+<section class="text-light mx-4 mb-4 text-start">
+  <div class="container">
+    <div class="index-banner p-4 p-md-5 rounded text-light">
+      <div class="col-lg-6 px-0">
+        <h1 class="display-4 fst-bold">30 Ağustos Zafer Bayramınız Kutlu olsun</h1>
+        <p class="lead my-3">Mustafa Kemal Atatürk ve silah arkadaşlarının yüce milletimize armağan ettiği 30 Ağustos Zafer Bayramı'nı kutluyor, şehit ve gazilerimizi saygı ve rahmetle anıyoruz.</p>
+        <p class="lead mb-0"><a href="#" class="text-light fw-bold">Duyuruya Göz At...</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Announcements -->
+
+<section class="mb-4 mx-4">
+  <div class="container">
+    <div class="row">
+
+      <!-- Announcement Cards -->
+
+      <% for(let i = 1; i <= 6; i++) { %>
+        <div class="col-lg-4 col-md-6 col-12 my-3">
+          <div class="card text-bg-dark">
+            <img src="images/announcements/pic<%= (i+1) %>.jpg" height="400" width="350" class="card-img" alt="...">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <a href="#" class="btn bg-light">Duyuruya Göz At</a>
+            </div>
+          </div>
+        </div>
+      <% } %>
+
+    <!-- EOS -->
+    </div>
+  </div>
+</section>
+
+<!-- All Announcements Button-->
+
+<section class="mx-4 mb-5 pb-4">
+  <div class="container">
+    <a href="/arsiv">
+      <button href="/arsiv" type="button" class="btn btn-light btn-lg col-12 col-md-auto">
+        Tüm Duyurulara Göz At &rarr;
+      </button>
+    </a>
+  </div>
+</section>
+
+<%- include("partials/footer.ejs") %>

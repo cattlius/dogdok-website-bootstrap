@@ -1,0 +1,77 @@
+<%- include("partials/header.ejs") %>   
+<%- include("partials/page-title.ejs") %>
+
+<!-- Section Body -->
+
+<div class="container px-sm-3 px-5">
+  <div id="jumbotron" class="my-5">
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8">
+        <div class="p-3 text-center bg-light" style="border-radius: 35px">
+          <h2 class="mb-0 text-light">Duyurular</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-5 justify-content-center">
+        <iframe class="col-lg-10 col-12" height="640" src="https://www.instagram.com/ytu_dogdok/embed/" frameborder="0"></iframe>
+    </div>
+
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8">
+        <div class="p-3 text-center bg-light" style="border-radius: 35px">
+          <h2 class="mb-0 text-light">Galeri</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-5 text-center bg-light rounded-3">
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xxl-4 g-4"
+      >
+        <% for(let i = 1; i <= 6; i++) { %>
+          <div class="col">
+            <img
+              class="img-fluid rounded-3"
+              src="images/gallery/img<%= i %>.jpg"
+              style="height: 300px; width: 400px; object-fit: cover"
+              alt=""
+            />
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery Navigation -->
+
+<nav aria-label="Page navigation">
+  <div class="container px-sm-3 px-5 pb-5">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<%- include("partials/footer.ejs") %>

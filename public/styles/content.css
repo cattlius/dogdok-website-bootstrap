@@ -1,0 +1,52 @@
+.bi {
+  font-size: 36px; 
+  color: white;
+}
+
+.index-banner {
+  height: 540px;
+  background-image: url("../images/announcements/pic1.jpg"); 
+  box-shadow: inset 0 0 0 50vw rgba(0,0,0,0.5); 
+  background-size: cover;
+  display: flex;
+  align-items: end;
+}
+
+.card-img {
+  object-fit: cover;
+  object-position: 50% 0;
+  filter: brightness(0.5);
+}
+
+#footer .btn-lg,
+#placeholder-jumbotron > .bg-light,
+#jumbotron .bg-light,
+#oyun-gelistirme .bg-light,
+#dijital-oyunculuk .bg-light,
+#e-spor .bg-light,
+.card,
+.card-body > .btn .ne-yapiyoruz-titles {
+  --bs-bg-opacity: 0.1;
+}
+
+.biz-kimiz-body p,
+#yk .h5,
+#dk .h5,
+#dijital-oyunculuk p,
+#oyun-gelistirme p,
+#e-spor p,
+.carousel-item p,
+.card-text {
+  --bs-text-opacity: 0.6;
+}
+
+#yk .h1,
+#yk .h3,
+#footer h5,
+#dijital-oyunculuk h2,
+#oyun-gelistirme h2,
+#e-spor h2,
+.carousel-item h2,
+.card-title {
+  --bs-text-opacity: 0.9;
+}

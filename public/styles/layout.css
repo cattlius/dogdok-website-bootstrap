@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  position: relative;
+  background-color: #121212;
+  /* background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: 3000px;
+  background-position: top center; */
+}
+
+.title-content{
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  border-radius: 21px;
+  padding: 8px 16px;
+}
+
+.btn-lg {
+  border-radius: 28px;
+  padding: 12px 24px;
+}
+
+.btn-purple {
+  background-color: #811292;
+  color: #efefef;
+}
+
+.header, .footer {
+  background-color: #0f0f0f;
+}
+
+.dogdok-logo {
+  height: 70px;
+}
+
+.navbar-toggler {
+  border: none;
+  transition: none;
+  color: #efefef;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.nav-link:link, .nav-link:visited{
+  color: #efefef;
+}
+
+/* .nav-link:hover{
+  color: #efefef;
+} */
+
+.form-control {
+  background-color: #efefef80;
+  border: none;
+}
+
+.non-message-form{
+  height: 3em;
+}
+
+footer {
+  color: #efefef;
+}
+
+/* .carousel-indicators {
+  position: static;
+} */
+
+
+/* @media (max-width: 768px) {
+  .navbar-brand > img {
+    height: 65px;
+  }
+} */
