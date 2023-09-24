@@ -134,6 +134,4 @@ dist
 
 ##### OTHER #####
 
-docs/
-scss/
-bootstrap.css
+package-lock.json
