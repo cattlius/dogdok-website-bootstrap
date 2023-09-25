@@ -2,76 +2,65 @@
 <%- include("partials/page-title.ejs") %>
 
 <!-- Section Body -->
+<section class="archives mb-5 mx-4">
+  <div class="container px-3 mb-5">  
+    <div class="col-lg-8 mb-5 mx-auto">
+      <div class="p-3 text-center bg-light" style="border-radius: 35px">
+        <h2 class="mb-0 text-light">Duyurular</h2>
+      </div>
+    </div>
 
-<div class="container px-sm-3 px-5">
-  <div id="jumbotron" class="my-5">
+    <iframe class="mb-5 rounded-3" style="width: 100%; height: 50vw" src="https://www.instagram.com/ytu_dogdok/embed/" frameborder="0"></iframe>
+    
+    <div class="col-lg-8 mb-5 mx-auto">
+      <div class="p-3 text-center bg-light" style="border-radius: 35px">
+        <h2 class="mb-0 text-light">Galeri</h2>
+      </div>
+    </div>
 
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-8">
-        <div class="p-3 text-center bg-light" style="border-radius: 35px">
-          <h2 class="mb-0 text-light">Duyurular</h2>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner rounded-3" style="background-color: black;">
+        <div class="carousel-item active text-center">
+          <a href="https://www.flickr.com/photos/199205626@N02/53212275823/in/album-72177720311436862/"><img src="https://live.staticflickr.com/65535/53212275823_3c6367e8c0_b.jpg" alt="..."></a>
+        </div>
+        <div class="carousel-item text-center">
+          <a href="https://www.flickr.com/photos/199205626@N02/53212275828/in/album-72177720311436862/"><img src="https://live.staticflickr.com/65535/53212275828_3262ab0b05_b.jpg" alt="..."></a>
+        </div>
+        <div class="carousel-item text-center">
+          <a href="https://www.flickr.com/photos/199205626@N02/53211087247/in/album-72177720311436862/"><img src="https://live.staticflickr.com/65535/53211087247_7b3d880cb1_b.jpg" alt="..."></a>
         </div>
       </div>
-    </div>
-
-    <div class="row mb-5 justify-content-center">
-        <iframe class="col-lg-10 col-12" height="640" src="https://www.instagram.com/ytu_dogdok/embed/" frameborder="0"></iframe>
-    </div>
-
-
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-8">
-        <div class="p-3 text-center bg-light" style="border-radius: 35px">
-          <h2 class="mb-0 text-light">Galeri</h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="p-5 text-center bg-light rounded-3">
-      <div
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xxl-4 g-4"
-      >
-        <% for(let i = 1; i <= 6; i++) { %>
-          <div class="col">
-            <img
-              class="img-fluid rounded-3"
-              src="images/gallery/img<%= i %>.jpg"
-              style="height: 300px; width: 400px; object-fit: cover"
-              alt=""
-            />
-          </div>
-        <% } %>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style="width: 108px;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" style="width: 108px;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
-</div>
+</section>
 
-<!-- Gallery Navigation -->
+<!-- GALLERY SCRIPT -->
 
-<nav aria-label="Page navigation">
-  <div class="container px-sm-3 px-5 pb-5">
-    <ul class="pagination">
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">1</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">2</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">3</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<script type="text/javascript">
+  function elementResizer(item, width, ratio){
+    item.style.height = `${width*ratio}px`;
+  }
+
+  function archiveGalleryResize() {
+    const archiveGalleryItem = document.querySelector(".carousel-inner");
+    const archiveGalleryImg = document.querySelectorAll(".carousel-item img");
+    const itemWidth = getComputedStyle(archiveGalleryItem).width.slice(0, -2);
+    elementResizer(archiveGalleryItem, itemWidth, (9/16));
+    archiveGalleryImg.forEach((img) => {
+      elementResizer(img, itemWidth, (9/16));
+    });
+  }
+
+  archiveGalleryResize();
+  window.addEventListener("resize", archiveGalleryResize);
+</script>
 
 <%- include("partials/footer.ejs") %>

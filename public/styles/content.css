@@ -20,10 +20,10 @@
 
 #footer .btn-lg,
 #placeholder-jumbotron > .bg-light,
-#jumbotron .bg-light,
-#oyun-gelistirme .bg-light,
-#dijital-oyunculuk .bg-light,
-#e-spor .bg-light,
+.archives .bg-light,
+.oyun-gelistirme .bg-light,
+.dijital-oyunculuk .bg-light,
+.e-spor .bg-light,
 .card,
 .card-body > .btn .ne-yapiyoruz-titles {
   --bs-bg-opacity: 0.1;
