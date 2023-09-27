@@ -16,7 +16,7 @@ emailjs.init({
   privateKey: 'DNtCpGR9DCDp1DsvLr_Yy'
 });
 
-// Navigation Links
+// Navigation Links GET
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
@@ -58,11 +58,11 @@ app.post("/contactFetch", (req, res) => {
 
 app.post("/contact", (req, res) => {
   emailjs.send("service_llmrj1b", "template_bqo382e", contactInfo).then(function(response) {
-      console.log('SUCCESS!', response.status, response.text);
-      res.redirect("/");
-    }, function(err) {
-      console.log('FAILED...', err);
-    });
+    console.log('SUCCESS!', response.status, response.text);
+    res.redirect(req.originalUrl);
+  }, function(err) {
+    console.log('FAILED...', err);
+  });
 });
 
 app.listen(port, () => {

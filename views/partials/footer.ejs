@@ -60,24 +60,5 @@
         </div>
       </footer>
     </section>
-
-    <script type="text/javascript">
-      function sendEmail(){
-        const emailParams = {
-          userFirstName: document.getElementById("fName").value,
-          userLastName: document.getElementById("lName").value,
-          userEmail: document.getElementById("email").value,
-          userMessage: document.getElementById("message").value
-        }
-
-        fetch("/contactFetch", {
-          method: "POST",
-          headers: {
-            "content-type": "application/json"
-          },
-          body: JSON.stringify(emailParams)
-        });
-      }
-    </script>
   </body>
 </html>
