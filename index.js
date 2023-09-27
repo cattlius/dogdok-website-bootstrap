@@ -1,15 +1,22 @@
 import express from "express";
 import ejs from "ejs";
+import emailjs from '@emailjs/nodejs';
 
 const app = express();
 const port = 3000;
+let contactInfo;
+
 app.use(express.static("public"));
+app.use(express.json());
 
-// const councilMembers = {"executive": [      {"name": "Kağan Berk Dizdaroğlu",      "nick": "Vipe",      "status": "Kulüp Başkanı",      "portrait_location": "images/portraits/kagan.jpg"      },      {"name": "Kağan Berk Dizdaroğlu",      "nick": "Vipe",      "status": "Kulüp Başkanı",      "portrait_location": "images/portraits/kagan.jpg"      },      {"name": "Kağan Berk Dizdaroğlu",      "nick": "Vipe",      "status": "Kulüp Başkanı",      "portrait_location": "images/portraits/kagan.jpg"      },      {"name": "Kağan Berk Dizdaroğlu",      "nick": "Vipe",      "status": "Kulüp Başkanı",      "portrait_location": "images/portraits/kagan.jpg"      },      {"name": "Kağan Berk Dizdaroğlu",      "nick": "Vipe",      "status": "Kulüp Başkanı",      "portrait_location": "images/portraits/kagan.jpg"      },      {"name": "Kağan Berk Dizdaroğlu",      "nick": "Vipe",      "status": "Kulüp Başkanı",      "portrait_location": "images/portraits/kagan.jpg"      },      {"name": "Kağan Berk Dizdaroğlu",      "nick": "Vipe",      "status": "Kulüp Başkanı",      "portrait_location": "images/portraits/kagan.jpg"      },      {"name": "Kağan Berk Dizdaroğlu",      "nick": "Vipe",      "status": "Kulüp Başkanı",      "portrait_location": "images/portraits/kagan.jpg"      },      {"name": "Kağan Berk Dizdaroğlu",      "nick": "Vipe",      "status": "Kulüp Başkanı",      "portrait_location": "images/portraits/kagan.jpg"      }  ],  "supervisor": [      {"name": "Uğur Dikici",      "nick": "Skater of Rivia",      "status": "Denetim Kurulu Başkanı",      "portrait_location": "images/portraits/ugur.jpg"      },      {"name": "Uğur Dikici",      "nick": "Skater of Rivia",      "status": "Denetim Kurulu Başkanı",      "portrait_location": "images/portraits/ugur.jpg"      },      {"name": "Uğur Dikici",      "nick": "Skater of Rivia",      "status": "Denetim Kurulu Başkanı",      "portrait_location": "images/portraits/ugur.jpg"      }  ]};
-// const councilMembersParsed = JSON.parse(councilMembers);
-// console.log(councilMembersParsed);
+// EmailJS Init
 
-// NAVIGATION LINKS
+emailjs.init({
+  publicKey: '1q22RSfCd3ZwzVPJV',
+  privateKey: 'DNtCpGR9DCDp1DsvLr_Yy'
+});
+
+// Navigation Links
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
@@ -36,20 +43,6 @@ app.get("/oyunlarimiz", (req, res) => {
   });
 });
 
-// app.get("/loncalar", (req, res) => {
-//   res.render("loncalar.ejs", {
-//     titleClass: "bi-lightning-charge-fill",
-//     titleText: "Loncalar",
-//   });
-// });
-
-// app.get("/makalelerimiz", (req, res) => {
-//   res.render("makalelerimiz.ejs", {
-//     titleClass: "bi-newspaper",
-//     titleText: "Makalelerimiz",
-//   });
-// });
-
 app.get("/arsiv", (req, res) => {
   res.render("arsiv.ejs", {
     titleClass: "bi-archive-fill",
@@ -57,6 +50,20 @@ app.get("/arsiv", (req, res) => {
   });
 });
 
+// Contact Form POST
+
+app.post("/contactFetch", (req, res) => {
+  contactInfo = req.body;
+})
+
+app.post("/contact", (req, res) => {
+  emailjs.send("service_llmrj1b", "template_bqo382e", contactInfo).then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      res.redirect("/");
+    }, function(err) {
+      console.log('FAILED...', err);
+    });
+});
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
