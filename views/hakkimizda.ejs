@@ -26,53 +26,30 @@
   </div>
 </section>
 
-<!-- Yönetim Kurulu Üyeleri -->
+<!-- Yönetim ve Denetim Kurulu Üyeleri -->
 
 <section class="council mx-4 mb-5">
   <div class="container text-center">
-    <h2 class="h1 text-light mb-4 pt-4 pb-3">- Yönetim Kurulu Üyeleri -</h2>
-    <div class="row px-3">
-      
-      <% for(let i = 1; i <= 9; i++) { %>
-        <div class="col-lg-4 col-md-6 col-12 py-3 mb-4">
-          <img
-            src="images/portraits/kagan.jpg"
-            alt=""
-            class="rounded-circle"
-            width="200"
-          />
+    <% council.subdivisions.forEach(subdivision => { %>
+      <h2 class="h1 text-light mb-4 pt-4 pb-3"><%= subdivision.title %></h2>
+      <div class="row px-3">
+        
+        <% subdivision.members.forEach(member => { %>
+          <div class="col-lg-4 col-md-6 col-12 py-3 mb-4">
+            <img
+              src="<%= member.portrait_location %>"
+              alt=""
+              class="rounded-circle"
+              width="200"
+            />
 
-          <h3 class="mt-4 text-light council-member-name">Kağan Berk Dizdaroğlu</h3>
-          <h4 class="text-primary council-member-nick">"Vipe"</h4>
-          <h5 class="text-light council-member-status">Kulüp Başkanı</h5>
-        </div>
-      <% } %>
-    </div>
-  </div>
-</section>
-
-<!-- Denetim Kurulu Üyeleri -->
-
-<section class="council mx-4 mb-5">
-  <div class="container text-center">
-    <h2 class="h1 text-light mb-4 pt-4 pb-3">- Denetim Kurulu Üyeleri -</h2> 
-    <div class="row px-3">
-      
-      <% for(let i = 1; i <= 3; i++) { %>
-        <div class="col-lg-4 col-md-6 col-12 py-3 mb-4">
-          <img
-            src="images/portraits/ugur.jpg"
-            alt=""
-            class="rounded-circle"
-            width="200"
-          />
-
-          <h3 class="mt-4 text-light council-member-name">Uğur Dikici</h3>
-          <h4 class="text-primary council-member-nick">"Skater of Rivia"</h4>
-          <h5 class="text-light council-member-status">Denetim Kurulu Başkanı</h5>
-        </div>
-      <% } %>
-    </div>
+            <h3 class="mt-4 text-light council-member-name"><%= member.name %></h3>
+            <h4 class="text-primary council-member-nick">"<%= member.nick %>"</h4>
+            <h5 class="text-light council-member-status"><%= member.status %></h5>
+          </div>
+        <% }); %>
+      </div>
+    <% }); %>
   </div>
 </section>
 

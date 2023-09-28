@@ -1,6 +1,10 @@
 import express from "express";
 import ejs from "ejs";
 import emailjs from '@emailjs/nodejs';
+import fs from "fs"
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 const port = 3000;
@@ -12,9 +16,16 @@ app.use(express.json());
 // EmailJS Init
 
 emailjs.init({
-  publicKey: '1q22RSfCd3ZwzVPJV',
-  privateKey: 'DNtCpGR9DCDp1DsvLr_Yy'
+  publicKey: process.env.EMAILJS_PUBLIC,
+  privateKey: process.env.EMAILJS_PRIVATE
 });
+
+// Static JSON Files
+
+const staticJSON = {
+  councilMembers: JSON.parse(fs.readFileSync('public/json/council.json')),
+  eventsList: JSON.parse(fs.readFileSync('public/json/events.json'))
+}
 
 // Navigation Links GET
 
@@ -26,6 +37,7 @@ app.get("/hakkimizda", (req, res) => {
   res.render("hakkimizda.ejs", {
     titleClass: "bi-info-circle-fill",
     titleText: "Hakkımızda",
+    council: staticJSON.councilMembers
   });
 });
 
@@ -33,6 +45,7 @@ app.get("/ne-yapiyoruz", (req, res) => {
   res.render("ne-yapiyoruz.ejs", {
     titleClass: "bi-emoji-heart-eyes-fill",
     titleText: "Ne Yapıyoruz?",
+    eventsList: staticJSON.eventsList
   });
 });
 
@@ -64,6 +77,9 @@ app.post("/contact", (req, res) => {
     console.log('FAILED...', err);
   });
 });
+
+
+// Port Listen
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
