@@ -8,21 +8,23 @@ const pool = mysql.createPool({
     user: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD,
     database: process.env.MYSQL_DATABASE
-  }).promise();
+}).promise();
   
-  async function getNotes(){
-    const [rows] =  await pool.query("SELECT * FROM test1");
-    return rows;
-  }
-  
-  async function getNote(id) {
-    const [rows] =  await pool.query(`
-    SELECT *
-    FROM test1
-    WHERE id = ?
-    `, [id]);
-    return rows[0];
-  }
-  
-  const notes = await getNote(1);
-  console.log(notes);
+export async function getPostTable(postNum) {
+  const [postsTable] =  await pool.query(`
+  SELECT *
+  FROM posts
+  ORDER BY post_created DESC
+  LIMIT ?
+  `, [postNum]);
+  return postsTable;
+}
+
+export async function getGalleryImages(){
+  const [galleryTable] =  await pool.query(`
+  SELECT *
+  FROM gallery
+  ORDER BY image_added DESC
+  `);
+  return galleryTable;
+}

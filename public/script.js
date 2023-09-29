@@ -1,8 +1,7 @@
-// Scroll-to-the-bottom functionality for the header 'İletişim' button
+// Scroll-to-the-bottom functionality for the "İletişim" button
 
-const contactButtonHeader = document.querySelector(".contact-button");
-    contactButtonHeader.addEventListener("click", () => {
-        window.scrollTo(0, document.body.scrollHeight);
+document.querySelector(".contact-button").addEventListener("click", () => {
+  window.scrollTo(0, document.body.scrollHeight);
 });
 
 // Contact Form Fetch

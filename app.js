@@ -3,15 +3,15 @@ import ejs from "ejs";
 import emailjs from '@emailjs/nodejs';
 import fs from "fs"
 import dotenv from 'dotenv';
+import { getPostTable, getGalleryImages } from "./database.js";
 
 dotenv.config();
 
 const app = express();
-const port = 3000;
-let contactInfo;
-
+const port = process.env.PORT;
 app.use(express.static("public"));
 app.use(express.json());
+let contactInfo;
 
 // EmailJS Init
 
@@ -27,10 +27,19 @@ const staticJSON = {
   eventsList: JSON.parse(fs.readFileSync('public/json/events.json'))
 }
 
+// dogdokdb
+
+const dogdokdbData = { 
+  postTable: await getPostTable(7),
+  galleryTable: await getGalleryImages()
+}
+
 // Navigation Links GET
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs", {
+    posts: dogdokdbData.postTable
+  });
 });
 
 app.get("/hakkimizda", (req, res) => {
@@ -60,6 +69,7 @@ app.get("/arsiv", (req, res) => {
   res.render("arsiv.ejs", {
     titleClass: "bi-archive-fill",
     titleText: "Arşiv",
+    images: dogdokdbData.galleryTable
   });
 });
 
@@ -77,7 +87,6 @@ app.post("/contact", (req, res) => {
     console.log('FAILED...', err);
   });
 });
-
 
 // Port Listen
 
