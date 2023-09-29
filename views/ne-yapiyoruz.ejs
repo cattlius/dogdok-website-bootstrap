@@ -1,155 +1,36 @@
 <%- include("partials/header.ejs") %>  
 <%- include("partials/page-title.ejs") %>
 
-<section id="dijital-oyunculuk" class="p-md-5 px-5 py-4">
-  <div class="container">
-    <!--  -->
+<% for (const [indexSubsection, subsection] of eventsList.subsections.entries()) { %>
+  <article class="dijital-oyunculuk mb-5 mx-4">
+    <div class="container px-3 pb-md-4">
 
-    <div class="row justify-content-center pb-md-5">
-      <div class="col-lg-8">
+      <div class="col-lg-8 mb-5 mx-auto<% if (indexSubsection === 0) { %> pb-3<% } else { %> py-3<% } %>">
         <div class="p-3 text-center bg-light" style="border-radius: 35px">
-          <h2 class="mb-0 text-light">Dijital Oyunculuk</h2>
+          <h2 class="mb-0 text-light"><%= subsection.title %></h2>
         </div>
       </div>
+
+      <% for (const [indexEvent, event] of subsection.events.entries()) { %>
+        <div class=" d-md-flex align-items-center<% if (indexEvent < subsection.events.length - 1) { %> mb-5<% } %>">
+          <div class="col-md-6 col-lg-4 pb-md-0 pb-5 pe-md-5 text-center">
+            <img
+              class="img-fluid"
+              src="<%= event.image_location %>"
+              alt=""
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="col-md-6 col-lg-8">
+            <h2 class="display-5 text-light"><%= event.title %></h2>
+            <p class="lead text-light my-4"><%= event.description %></p>
+            <button class="btn btn-light btn-lg">Git</button>
+          </div>
+        </div>  
+      <% } %>
+
     </div>
-
-    <!--  -->
-
-    <div class="row align-items-center py-5 px-3">
-      <div class="col-md-6 col-lg-4 pb-md-0 pb-5 pe-md-5 text-center">
-        <img
-          class="img-fluid"
-          src="https://picsum.photos/400/400"
-          alt=""
-          style="border-radius: 50%"
-        />
-      </div>
-      <div class="col-md-6 col-lg-8">
-        <h2 class="display-5 text-light">GameNight</h2>
-        <p class="lead text-light my-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <button class="btn btn-light btn-lg">Git</button>
-      </div>
-    </div>
-
-    <!--  -->
-
-    <div class="row align-items-center py-5 px-3">
-      <div class="col-md-6 col-lg-4 pb-md-0 pb-5 pe-md-5 text-center">
-        <img
-          class="img-fluid"
-          src="https://picsum.photos/400/400"
-          alt=""
-          style="border-radius: 50%"
-        />
-      </div>
-      <div class="col-md-6 col-lg-8">
-        <h2 class="display-5 text-light">Dijital Gaming Days</h2>
-        <p class="lead text-light my-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <button class="btn btn-light btn-lg">Git</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--  -->
-
-<section id="oyun-gelistirme" class="p-md-5 px-5 py-4">
-  <div class="container">
-    <!--  -->
-
-    <div class="row justify-content-center pb-md-5">
-      <div class="col-lg-8">
-        <div class="p-3 text-center bg-light" style="border-radius: 35px">
-          <h2 class="mb-0 text-light">Oyun Geliştirme</h2>
-        </div>
-      </div>
-    </div>
-
-    <!--  -->
-
-    <div class="row align-items-center py-5 px-3">
-      <div class="col-md-6 col-lg-4 pb-md-0 pb-5 pe-md-5 text-center">
-        <img
-          class="img-fluid"
-          src="https://picsum.photos/400/400"
-          alt=""
-          style="border-radius: 50%"
-        />
-      </div>
-      <div class="col-md-6 col-lg-8">
-        <h2 class="display-5 text-light">DevNight</h2>
-        <p class="lead text-light my-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <button class="btn btn-light btn-lg">Git</button>
-      </div>
-    </div>
-
-    <!--  -->
-
-    <div class="row align-items-center py-5 px-3">
-      <div class="col-md-6 col-lg-4 pb-md-0 pb-5 pe-md-5 text-center">
-        <img
-          class="img-fluid"
-          src="https://picsum.photos/400/400"
-          alt=""
-          style="border-radius: 50%"
-        />
-      </div>
-      <div class="col-md-6 col-lg-8">
-        <h2 class="display-5 text-light">Oyun Geliştirme Eğitimleri</h2>
-        <p class="lead text-light my-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <button class="btn btn-light btn-lg">Git</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--  -->
-
-<section id="e-spor" class="p-md-5 px-5 py-4">
-  <div class="container">
-    <!--  -->
-
-    <div class="row justify-content-center pb-5">
-      <div class="col-lg-8">
-        <div class="p-3 text-center bg-light" style="border-radius: 35px">
-          <h2 class="mb-0 text-light">E-Spor</h2>
-        </div>
-      </div>
-    </div>
-
-    <!--  -->
-
-    <div class="row align-items-center py-md-5 pt-0 pb-5">
-      <div class="col-md-6 col-lg-4 pb-md-0 pb-5 pe-md-5 text-center">
-        <img
-          class="img-fluid"
-          src="https://picsum.photos/400/400"
-          alt=""
-          style="border-radius: 50%"
-        />
-      </div>
-      <div class="col-md-6 col-lg-8">
-        <h2 class="display-5 text-light">Turnuvalar</h2>
-        <p class="lead text-light my-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <button class="btn btn-light btn-lg">Git</button>
-      </div>
-    </div>
-  </div>
-</section>
+  </article>
+<% } %>
 
 <%- include("partials/footer.ejs") %>

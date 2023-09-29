@@ -5,7 +5,7 @@
 
 .index-banner {
   height: 540px;
-  background-image: url("../images/announcements/pic1.jpg"); 
+  /* background-image: url("../images/announcements/pic1.jpg");  */
   box-shadow: inset 0 0 0 50vw rgba(0,0,0,0.5); 
   background-size: cover;
   display: flex;
@@ -20,10 +20,10 @@
 
 #footer .btn-lg,
 #placeholder-jumbotron > .bg-light,
-#jumbotron .bg-light,
-#oyun-gelistirme .bg-light,
-#dijital-oyunculuk .bg-light,
-#e-spor .bg-light,
+.archives .bg-light,
+.oyun-gelistirme .bg-light,
+.dijital-oyunculuk .bg-light,
+.e-spor .bg-light,
 .card,
 .card-body > .btn .ne-yapiyoruz-titles {
   --bs-bg-opacity: 0.1;

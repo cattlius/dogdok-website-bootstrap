@@ -1,0 +1,44 @@
+{
+    "subsections": [
+        {
+            "title": "Dijital Oyunculuk",
+            "events": [
+                {
+                    "title": "GameNight",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                    "image_location": "images/portraits/kagan.jpg"
+                },
+                {
+                    "title": "Digital Gaming Days",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                    "image_location": "images/portraits/kagan.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Oyun Geliştirme",
+            "events": [
+                {
+                    "title": "DevNight",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                    "image_location": "images/portraits/kagan.jpg"
+                },
+                {
+                    "title": "Oyun Geliştirme Etkinlikleri",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                    "image_location": "images/portraits/kagan.jpg"
+                }
+            ]
+        },
+        {
+            "title": "E-Spor",
+            "events": [
+                {
+                    "title": "Turnuvalar",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                    "image_location": "images/portraits/kagan.jpg"
+                }
+            ]
+        }
+    ]
+}
