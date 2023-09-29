@@ -20,16 +20,14 @@ emailjs.init({
   privateKey: process.env.EMAILJS_PRIVATE
 });
 
-// Static JSON Files
+// MySQL Database and JSON Data Fetch 
 
-const staticJSON = {
+const JSONData = {
   councilMembers: JSON.parse(fs.readFileSync('public/json/council.json')),
   eventsList: JSON.parse(fs.readFileSync('public/json/events.json'))
 }
 
-// dogdokdb
-
-const dogdokdbData = { 
+const dbData = { 
   postTable: await getPostTable(7),
   galleryTable: await getGalleryImages()
 }
@@ -38,7 +36,7 @@ const dogdokdbData = {
 
 app.get("/", (req, res) => {
   res.render("index.ejs", {
-    posts: dogdokdbData.postTable
+    posts: dbData.postTable
   });
 });
 
@@ -46,7 +44,7 @@ app.get("/hakkimizda", (req, res) => {
   res.render("hakkimizda.ejs", {
     titleClass: "bi-info-circle-fill",
     titleText: "Hakkımızda",
-    council: staticJSON.councilMembers
+    council: JSONData.councilMembers
   });
 });
 
@@ -54,7 +52,7 @@ app.get("/ne-yapiyoruz", (req, res) => {
   res.render("ne-yapiyoruz.ejs", {
     titleClass: "bi-emoji-heart-eyes-fill",
     titleText: "Ne Yapıyoruz?",
-    eventsList: staticJSON.eventsList
+    eventsList: JSONData.eventsList
   });
 });
 
@@ -69,7 +67,7 @@ app.get("/arsiv", (req, res) => {
   res.render("arsiv.ejs", {
     titleClass: "bi-archive-fill",
     titleText: "Arşiv",
-    images: dogdokdbData.galleryTable
+    images: dbData.galleryTable
   });
 });
 
