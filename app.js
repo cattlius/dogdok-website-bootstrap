@@ -1,5 +1,4 @@
 import express from "express";
-import ejs from "ejs";
 import emailjs from '@emailjs/nodejs';
 import fs from "fs"
 import dotenv from 'dotenv';
@@ -79,7 +78,7 @@ app.post("/contactFetch", (req, res) => {
 
 app.post("/contact", (req, res) => {
   emailjs.send("service_llmrj1b", "template_bqo382e", contactInfo).then(function(response) {
-    console.log('SUCCESS!', response.status, response.text);
+    console.log('Mesajınız Gönderildi.', response.status, response.text);
     res.redirect(req.originalUrl);
   }, function(err) {
     console.log('FAILED...', err);
