@@ -2,7 +2,6 @@ import express from "express";
 import emailjs from '@emailjs/nodejs';
 import fs from "fs"
 import dotenv from 'dotenv';
-import { getPostTable, getGalleryImages } from "./database.js";
 
 dotenv.config();
 
@@ -19,23 +18,20 @@ emailjs.init({
   privateKey: process.env.EMAILJS_PRIVATE
 });
 
-// MySQL Database and JSON Data Fetch 
+// JSON Data 
 
 const JSONData = {
   councilMembers: JSON.parse(fs.readFileSync('public/json/hakkimizda.json')),
-  eventsList: JSON.parse(fs.readFileSync('public/json/ne_yapiyoruz.json'))
-}
-
-const dbData = { 
-  postTable: await getPostTable(7),
-  galleryTable: await getGalleryImages()
+  eventsList: JSON.parse(fs.readFileSync('public/json/ne_yapiyoruz.json')),
+  postsList: JSON.parse(fs.readFileSync('public/json/index.json')),
+  gallery: JSON.parse(fs.readFileSync('public/json/arsiv.json'))
 }
 
 // Navigation Links GET
 
 app.get("/", (req, res) => {
   res.render("index.ejs", {
-    posts: dbData.postTable
+    posts: JSONData.postsList
   });
 });
 
@@ -66,7 +62,7 @@ app.get("/arsiv", (req, res) => {
   res.render("arsiv.ejs", {
     titleClass: "bi-archive-fill",
     titleText: "Arşiv",
-    images: dbData.galleryTable
+    images: JSONData.gallery
   });
 });
 
