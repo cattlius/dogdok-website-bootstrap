@@ -24,7 +24,14 @@ body {
   height: 70px;
 }
 
-.navbar-toggler-icon {
+@media (max-width: 768px){
+  .dogdok-logo {
+    height: 56px;
+  }
+}
+
+.navbar-toggler {
+  padding: 0;
   border: none;
   transition: none;
 }
