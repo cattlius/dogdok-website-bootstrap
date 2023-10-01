@@ -1,0 +1,59 @@
+{
+    "subsections": [
+        {
+            "title": "Dijital Oyunculuk",
+            "events": [
+                {
+                    "title": "GameNight",
+                    "description": "Kulübümüze ayırttığımız bir e-spor kafede akşam 21.00'dan sabah 09.00'a kadar oyunlar oynuyor, etkinlikler düzenliyor, turnuvalar ve çekilişler yapıyoruz.",
+                    "image_location": "images/ne_yapiyoruz/gamenight.jpg"
+                },
+                {
+                    "title": "Digital Gaming Days",
+                    "description": "En büyük etkinliğimiz olan DGD'de 2 gün boyunca oyun tanıtımları ve oynama alanları kuruyoruz, turnuvalar ve çekilişler düzenliyoruz, sektörün değerli isimleriyle söyleşi düzenliyoruz.",
+                    "image_location": "images/ne_yapiyoruz/digital-gaming-days.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Oyun Geliştirme",
+            "events": [
+                {
+                    "title": "DevNight",
+                    "description": "Etkinliğimizde game night etkinliğimize benzer bir şekilde okulda toplanıp önce sektörden bir geliştiriciyle tea talk yapıp ardından gece boyunca oyun geliştireceğiz.",
+                    "image_location": "images/ne_yapiyoruz/devnight.jpg"
+                },
+                {
+                    "title": "Game Jam",
+                    "description": "Sene içinde okulumuzda 3 kere düzenlediğimiz etkinliğimizde katılımcılar 48 saat boyunca belirlenmiş bir temada oyun geliştirerek yarışıyor. Bizler de söyleşiler düzenliyor, sponsorlarımızın ürünlerini dağıtıyoruz.",
+                    "image_location": "images/ne_yapiyoruz/game-jam.jpg"
+                },
+                {
+                    "title": "Sertifikalı Eğitimler",
+                    "description": "Oyun geliştirmeyi her yönüyle ele alan eğitimimizle üyelerimizi sektöre hazırlıyoruz, oyun geliştirmeye ilk adımlarını atmalarını sağlıyoruz. Eğitim sonrası yapacağımız game jamlere hazır hale getiriyoruz.",
+                    "image_location": "images/ne_yapiyoruz/sertifikali-egitimler.jpg"
+                },
+                {
+                    "title": "Workshoplar",
+                    "description": "Sektörün ileri gelen insanlarını üyelerimizle buluşturuyoruz.  Onların mentörlüğünde üretkenliğimizi ortaya çıkarıyoruz.",
+                    "image_location": "images/ne_yapiyoruz/workshop.jpg"
+                },
+                {
+                    "title": "Teknik Gezi",
+                    "description": "Sene içinde yaptığımız teknik geziler ile üyelerimizin sektörle buluşmasını, sektörün tecrübeli insanlarıyla bir araya gelmesini sağlıyoruz.",
+                    "image_location": "images/ne_yapiyoruz/teknik-gezi.jpg"
+                }
+            ]
+        },
+        {
+            "title": "E-Spor",
+            "events": [
+                {
+                    "title": "Turnuvalar",
+                    "description": "Sene boyunca League of Legends, Valorant, CS:GO gibi rekabetçi oyunların turnuvalarını düzenleyip sponsor ödülleri dağıtıyoruz.",
+                    "image_location": "images/ne_yapiyoruz/turnuvalar.jpg"
+                }
+            ]
+        }
+    ]
+}

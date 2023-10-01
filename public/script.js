@@ -31,12 +31,15 @@ function elementResizer(item, width, ratio){
 
 function archiveGalleryResize() {
     const archiveGalleryItem = document.querySelector(".carousel-inner");
-    const archiveGalleryImg = document.querySelectorAll(".carousel-item img");
-    const itemWidth = getComputedStyle(archiveGalleryItem).width.slice(0, -2);
-    elementResizer(archiveGalleryItem, itemWidth, (9/16));
-    archiveGalleryImg.forEach((img) => {
-      elementResizer(img, itemWidth, (9/16));
-    });
+    if (typeof(archiveGalleryItem) != 'undefined' && archiveGalleryItem != null)
+    {
+      const archiveGalleryImg = document.querySelectorAll(".carousel-item img");
+      const itemWidth = window.getComputedStyle(archiveGalleryItem).width.slice(0, -2);
+      elementResizer(archiveGalleryItem, itemWidth, (9/16));
+      archiveGalleryImg.forEach((img) => {
+        elementResizer(img, itemWidth, (9/16));
+      });
+    }
 }
 
 archiveGalleryResize();

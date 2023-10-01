@@ -7,55 +7,55 @@
                     "name": "Kağan Berk Dizdaroğlu",
                     "nick": "Vipe",
                     "status": "Kulüp Başkanı",
-                    "portrait_location": "images/portraits/kagan.jpg"
+                    "portrait_location": "images/hakkimizda/kagan.jpg"
                 },
                 {
                     "name": "Ahmet Hamdi Zorlu",
                     "nick": "MiniPantolon",
                     "status": "Kulüp Başkan Yardımcısı",
-                    "portrait_location": "images/portraits/ahmet.jpg"
+                    "portrait_location": "images/hakkimizda/ahmet.jpg"
                 },
                 {
                     "name": "Ceyhun Taha Karabıyık",
                     "nick": "cattlius",
                     "status": "Kulüp Sekreteri",
-                    "portrait_location": "images/portraits/ceyhun.jpg"
+                    "portrait_location": "images/hakkimizda/ceyhun.jpg"
                 },
                 {
                     "name": "Kemal Ata Türkoğlu",
                     "nick": "Kata",
                     "status": "Kulüp Saymanı",
-                    "portrait_location": "images/portraits/kata.png"
+                    "portrait_location": "images/hakkimizda/kata.png"
                 },
                 {
                     "name": "Ali Eren Arık",
                     "nick": "Alren",
                     "status": "Game Tester",
-                    "portrait_location": "images/portraits/ali-eren.jpg"
+                    "portrait_location": "images/hakkimizda/ali-eren.jpg"
                 },
                 {
                     "name": "Simge Temel",
                     "nick": "Kyuubi",
                     "status": "Sosyal Medya Dep.",
-                    "portrait_location": "images/portraits/simge.jpg"
+                    "portrait_location": "images/hakkimizda/simge.jpg"
                 },
                 {
                     "name": "Oğuzhan Esgiyusufo",
                     "nick": "EsgiJ",
                     "status": "Sponsor Dep.",
-                    "portrait_location": "images/portraits/oguzhan.jpg"
+                    "portrait_location": "images/hakkimizda/oguzhan.jpg"
                 },
                 {
                     "name": "Ataberk Akın",
                     "nick": "SoyaMilk",
                     "status": "Oyun Geliştirme Dep.",
-                    "portrait_location": "images/portraits/ataberk.jpg"
+                    "portrait_location": "images/hakkimizda/ataberk.jpg"
                 },
                 {
                     "name": "Nima Peykarimeh",
                     "nick": "Peykarimeh",
                     "status": "Eğitim Koordinatörü",
-                    "portrait_location": "images/portraits/nima.jpg"
+                    "portrait_location": "images/hakkimizda/nima.jpg"
                 }
             ]
         },
@@ -66,19 +66,19 @@
                     "name": "Uğur Dikici",
                     "nick": "Skater of Rivia",
                     "status": "Denetim Kurulu Başkanı",
-                    "portrait_location": "images/portraits/ugur.jpg"
+                    "portrait_location": "images/hakkimizda/ugur.jpg"
                 },
                 {
                     "name": "Furkan Necati Ürkmez",
                     "nick": "KaBaBlanKa",
                     "status": "Denetim Kurulu Üyesi",
-                    "portrait_location": "images/portraits/necati.jpg"
+                    "portrait_location": "images/hakkimizda/necati.jpg"
                 },
                 {
                     "name": "Ömer Ensar Akinan",
                     "nick": "Le Roi Lena",
                     "status": "Denetim Kurulu Üyesi",
-                    "portrait_location": "images/portraits/lena.jpeg"
+                    "portrait_location": "images/hakkimizda/lena.jpeg"
                 }
             ]
         }

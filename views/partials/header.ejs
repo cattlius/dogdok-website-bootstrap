@@ -19,12 +19,12 @@
   <body>
     <section class="header mb-5">
       <header class="navbar navbar-expand-lg mx-4">
-        <div class="container px-3 my-2 my-lg-3">
+        <div class="container px-3 my-2 my-lg-3" data-bs-theme="dark">
           <a href="/" class="navbar-brand"
-            ><img src="images/logo-svg.svg" alt="DOGDOK logo" class="dogdok-logo"/>
+            ><img src="images/logo.svg" alt="DOGDOK logo" class="dogdok-logo"/>
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler" 
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#menubar"
@@ -49,7 +49,7 @@
               <li>
                 <button
                   href="#iletisim"
-                  class="contact-button btn btn-purple ms-lg-2 my-lg-0 my-2"
+                  class="contact-button button-custom bg-purple-custom ms-lg-2 my-lg-0 my-2"
                 >
                   İletişim
                 </button>
@@ -61,10 +61,3 @@
         </div>
       </header>
     </section>
-
-    <script>
-      const contactButtonHeader = document.querySelector(".contact-button");
-      contactButtonHeader.addEventListener("click", () => {
-        window.scrollTo(0, document.body.scrollHeight);
-      });
-    </script>

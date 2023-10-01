@@ -25,10 +25,10 @@
           <div class="col-lg-4 col-md-6 col-12 my-3">
             <div class="card text-bg-dark">
               <img src="<%= post.post_imglink %>" height="400" width="350" class="card-img" alt="...">
-              <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
+              <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start p-4">
                 <h5 class="card-title"><%= post.post_title %></h5>
                 <p class="card-text"><%= post.post_desc %></p>
-                <a href="<%= post.post_link %>" class="btn bg-light">Duyuruya Göz At</a>
+                <a href="<%= post.post_link %>" class="button-custom bg-gray-custom">Göz At</a>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@
 <section class="mx-4 mb-5 pb-4">
   <div class="container">
     <a href="/arsiv">
-      <button href="/arsiv" type="button" class="btn btn-light btn-lg col-12 col-md-auto">
+      <button href="/arsiv" type="button" class="button-lg-custom bg-purple-custom col-12 col-md-auto">
         Tüm Duyurulara Göz At &rarr;
       </button>
     </a>

@@ -1,11 +1,19 @@
+/* Page titles */
+
 .bi {
   font-size: 36px; 
   color: white;
 }
 
+.title-content{
+  display: flex;
+  align-items: center;
+}
+
+/* Landing Page */
+
 .index-banner {
   height: 540px;
-  /* background-image: url("../images/announcements/pic1.jpg");  */
   box-shadow: inset 0 0 0 50vw rgba(0,0,0,0.5); 
   background-size: cover;
   display: flex;
@@ -17,6 +25,53 @@
   object-position: 50% 0;
   filter: brightness(0.5);
 }
+
+/* About Page */
+
+
+.council-member-status {
+  color: #63768D;
+}
+
+/* Archive Page */
+
+.carousel-inner {
+  background-color: #0f0f0f;
+}
+
+/* Buttons */
+
+.button-custom {
+  border-radius: 1.375rem;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  text-decoration: none;
+}
+
+.button-lg-custom {
+  font-size: 1.25rem;
+  border-radius: 1.82rem;
+  padding: 0.875rem 1.75rem;
+  border: none;
+  text-decoration: none;
+}
+
+/* Background Colors */
+
+.bg-purple-custom {
+  background-image: linear-gradient(45deg, #5C0C69, #A014B5);
+  color: #efefef;
+}
+
+.bg-gray-custom {
+  background-image: linear-gradient(45deg, rgba(239, 239, 239, 0.1), rgba(239, 239, 239, 0.15));
+  backdrop-filter: blur(10px);
+  color: rgb(239, 239, 239);
+}
+
+/* Text Colors */
+
+/* ! Needs to be fixed! */ 
 
 #footer .btn-lg,
 #placeholder-jumbotron > .bg-light,
@@ -36,7 +91,8 @@
 #oyun-gelistirme p,
 #e-spor p,
 .carousel-item p,
-.card-text {
+.card-text, 
+.council-member-nick {
   --bs-text-opacity: 0.6;
 }
 

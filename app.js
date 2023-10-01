@@ -23,8 +23,8 @@ emailjs.init({
 // MySQL Database and JSON Data Fetch 
 
 const JSONData = {
-  councilMembers: JSON.parse(fs.readFileSync('public/json/council.json')),
-  eventsList: JSON.parse(fs.readFileSync('public/json/events.json'))
+  councilMembers: JSON.parse(fs.readFileSync('public/json/hakkimizda.json')),
+  eventsList: JSON.parse(fs.readFileSync('public/json/ne_yapiyoruz.json'))
 }
 
 const dbData = { 
