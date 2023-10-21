@@ -6,22 +6,22 @@ document.querySelector(".contact-button").addEventListener("click", () => {
 
 // Contact Form Fetch
 
-function sendEmail(){
-    const emailParams = {
-      userFirstName: document.getElementById("fName").value,
-      userLastName: document.getElementById("lName").value,
-      userEmail: document.getElementById("email").value,
-      userMessage: document.getElementById("message").value
-    }
+// function sendEmail(){
+//     const emailParams = {
+//       userFirstName: document.getElementById("fName").value,
+//       userLastName: document.getElementById("lName").value,
+//       userEmail: document.getElementById("email").value,
+//       userMessage: document.getElementById("message").value
+//     }
 
-    fetch("/contactFetch", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json"
-      },
-      body: JSON.stringify(emailParams)
-    });
-}
+//     fetch("/contactFetch", {
+//       method: "POST",
+//       headers: {
+//         "content-type": "application/json"
+//       },
+//       body: JSON.stringify(emailParams)
+//     });
+// }
 
 // Archive Gallery Application
 

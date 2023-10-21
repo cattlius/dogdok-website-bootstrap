@@ -3,13 +3,19 @@
         <div class="container pt-5 px-3">
           <div class="contact-form col-lg-8 mb-5 mx-auto">
             <h5 class="py-3 mb-4 border-bottom border-secondary text-light">Bize Ulaşın</h5>
-            <form action="/contact" onsubmit="sendEmail()" method="POST" class="row">
+            <form action="https://formsubmit.co/info@ytudogdok.com" method="POST" class="row">
+
+              <!-- Honeypot -->
+              <input type="text" name="_honey" style="display: none;">
+              <!-- Disable Captcha -->
+              <input type="hidden" name="_captcha" calue="false">
+
               <div class="col-md-6 col-12 mb-3">
                 <input
                   type="text"
                   class="form-control non-message-form"
                   id="fName"
-                  name="fName"
+                  name="First&nbsp;Name"
                   placeholder="Adınız"
                   required/>
               </div>
@@ -18,7 +24,7 @@
                   type="text"
                   class="form-control non-message-form"
                   id="lName"
-                  name="lName"
+                  name="Last&nbsp;Name"
                   placeholder="Soyadınız"
                   required
                 />
@@ -28,7 +34,7 @@
                   type="email"
                   class="form-control non-message-form"
                   id="email"
-                  name="email"
+                  name="Email"
                   placeholder="E-posta Adresiniz"
                   required
                 />
@@ -37,7 +43,7 @@
                 <textarea
                   class="form-control pt-3"
                   id="message"
-                  name="message"
+                  name="Message"
                   rows="8"
                   placeholder="Mesajınız"
                   required

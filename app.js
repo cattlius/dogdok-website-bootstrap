@@ -1,5 +1,5 @@
 import express from "express";
-import emailjs from '@emailjs/nodejs';
+// import emailjs from '@emailjs/nodejs';
 import fs from "fs"
 import dotenv from 'dotenv';
 
@@ -9,14 +9,15 @@ const app = express();
 const port = process.env.PORT;
 app.use(express.static("public"));
 app.use(express.json());
-let contactInfo;
+
+// let contactInfo;
 
 // EmailJS Init
 
-emailjs.init({
-  publicKey: process.env.EMAILJS_PUBLIC,
-  privateKey: process.env.EMAILJS_PRIVATE
-});
+// emailjs.init({
+//   publicKey: process.env.EMAILJS_PUBLIC,
+//   privateKey: process.env.EMAILJS_PRIVATE
+// });
 
 // JSON Data 
 
@@ -68,18 +69,18 @@ app.get("/arsiv", (req, res) => {
 
 // Contact Form POST
 
-app.post("/contactFetch", (req, res) => {
-  contactInfo = req.body;
-})
+// app.post("/contactFetch", (req, res) => {
+//   contactInfo = req.body;
+// })
 
-app.post("/contact", (req, res) => {
-  emailjs.send("service_llmrj1b", "template_bqo382e", contactInfo).then(function(response) {
-    console.log('Mesajınız Gönderildi.', response.status, response.text);
-    res.redirect(req.originalUrl);
-  }, function(err) {
-    console.log('FAILED...', err);
-  });
-});
+// app.post("/contact", (req, res) => {
+//   emailjs.send("service_llmrj1b", "template_bqo382e", contactInfo).then(function(response) {
+//     console.log('Mesajınız Gönderildi.', response.status, response.text);
+//     res.redirect(req.originalUrl);
+//   }, function(err) {
+//     console.log('FAILED...', err);
+//   });
+// });
 
 // Port Listen
 
